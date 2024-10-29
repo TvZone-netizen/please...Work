@@ -133,3 +133,33 @@ local function checkHeart(index, position)
       checkHeart(2, Vector3.new(2603.96, 146.41, 2409))
     end
 })
+local Tabs = {
+    Main = Window:AddTab({ Title = "Other", Icon = "" }),
+}
+
+Tabs.Main:AddButton({
+    Title = "FullBright",
+    Description = "Very important button",
+    Callback = function()
+local Light = game:GetService("Lighting")
+    
+    function dofullbright()
+    Light.Ambient = Color3.new(1, 1, 1)
+    Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+    Light.ColorShift_Top = Color3.new(1, 1, 1)
+    end
+    
+    dofullbright()
+    
+    Light.LightingChanged:Connect(dofullbright)
+    end
+})
+
+
+Tabs.Main:AddButton({
+    Title = "Esp (Players Only)",
+    Description = "Players only you retard if you think it is monster",
+    Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+    end
+})
