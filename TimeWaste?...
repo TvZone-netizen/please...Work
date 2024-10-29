@@ -1,0 +1,135 @@
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/RileyBeeRBLX4/UI-Library/refs/heads/main/Fluent%20UI/Library.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+
+local Window = Fluent:CreateWindow({
+    Title = "TvHub" .. Fluent.Version,
+    SubTitle = "by TvZone",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
+
+local Tabs = {
+    Main = Window:AddTab({ Title = "Book 1", Icon = "" }),
+}
+
+local Section = Tabs.Main:AddSection("B1c2")
+
+Tabs.Main:AddButton({
+    Title = "AutoPass",
+    Description = "Auto passes part 1",
+    Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.1209945678711, 56.403282165527344, -1584.929931640625)
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Part 2 Auto Pass",
+    Description = "Very important button",
+    Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(236.37899780273438, 101.9411849975586, -588.1929931640625)
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Part 3 Auto Pass",
+    Description = "Very important button",
+    Callback = function()
+game.Players.LocalPlayer.Character,HumanoidRootPart.CFrame= CFrame.new(906.8800048828125, 72.92420959472656, -354.8910827636719)
+    end
+})
+
+local Section = Tabs.Main:AddSection("B1C3")
+
+Tabs.Main:AddButton({
+    Title = "1 auto pass",
+    Description = "Self Explanatory",
+    Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2411.82421875, -25.032682418823242, 2276.953125)
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Part 2 Auto Pass",
+    Description = "Self Explanatory",
+    Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.75540161132812, 31.71737289428711, 440.6657409667969)
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Part 3 Auto Pass",
+    Description = "Self Explanatory",
+    Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-625.2945556640625, 947.8042602539062, -1368.4886474609375)
+    end
+})
+
+local Section = Tabs.Main:AddSection("B1C4")
+
+Tabs.Main:AddButton({
+    Title = "1 auto pass",
+    Description = "Self Explanatory",
+    Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.46755981445312, -51.000003814697266, -1417.052734375)
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Do butter fly ur self",
+    Description = "self explanatory",
+    Callback = function()
+
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Kusonoki Auto pass",
+    Description = "Self Explanatory",
+    Callback = function()
+
+local curseditems = workspace.GameInfo.PuzzleItems:GetChildren()
+        local autoburn = workspace.Well.Burner
+
+        for _, curseditems2 in ipairs(curseditems) do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(curseditems2.Position)
+            task.wait(0.3)
+            fireproximityprompt(curseditems2.ProximityPrompt)
+        end
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(686.9511108398438, 26.722492218017578, 2252.857421875)
+        task.wait(0.5)
+        for i = 1, 6 do
+            fireproximityprompt(autoburn.ProximityPrompt)
+            task.wait(0.3)
+        end
+
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Heart Part",
+    Description = " Auto Pass ",
+    Callback = function()
+local function checkHeart(index, position)
+
+        while true do
+            local heart = workspace.GameHearts:GetChildren()[index]
+            if heart and heart:FindFirstChild("Destroyed") then
+              break
+            else
+              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
+                  end
+            task.wait(0.5)
+        end
+      end
+
+      checkHeart(1, Vector3.new(3208.44, 148.64, 2187.78))
+      checkHeart(3, Vector3.new(2806.88, 134.34, 2426.09))
+      checkHeart(2, Vector3.new(2603.96, 146.41, 2409))
+    end
+})
